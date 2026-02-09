@@ -77,8 +77,9 @@ const Hero = ({ loading }) => {
               </p>
 
               <p className="text-base md:text-lg text-gray-300 max-w-xl mx-auto md:mx-0">
-                I design and build responsive, production-ready interfaces in
-                React with a heavy focus on layout, typography, and polish.
+                I create responsive, production-ready web interfaces in React, focusing on clean layouts, strong typography, and polished details.
+
+
               </p>
             </>
           )}
