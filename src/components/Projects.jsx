@@ -70,7 +70,7 @@ const personalProjects = [
 const Projects = () => {
   return (
     <section id="projects" className="w-full px-4 py-16 bg-black text-white border-t border-gray-900">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold mb-2">Projects</h2>
         <p className="text-gray-300 mb-8">
           Real‑world builds and UX case studies you can click into.

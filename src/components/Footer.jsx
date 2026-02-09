@@ -19,24 +19,20 @@ const Footer = ({ openModal }) => {
   const handleQuickLinkClick = (type) => {
     if (type === "projects") {
       if (location.pathname === "/") {
-        // On home page, scroll to projects
         const el = document.getElementById("projects");
         if (el) el.scrollIntoView({ behavior: "smooth" });
       } else {
-        // On other pages, navigate to home with hash
         navigate("/#projects");
       }
     } else if (openModal) {
-      openModal(type); // "about" or "contact"
+      openModal(type);
     }
   };
 
   return (
     <footer className="w-full border-t border-gray-900 bg-gradient-to-b from-black via-[#020617] to-black text-gray-300">
-      <div className="max-w-5xl mx-auto px-4 py-10">
-        {/* Top 3-column content */}
+      <div className="max-w-7xl mx-auto px-4 py-10">
         <div className="grid gap-10 md:grid-cols-3 mb-8 text-center md:text-left">
-          {/* Brand */}
           <div className="flex flex-col items-center md:items-start">
             <button
               type="button"
@@ -52,13 +48,11 @@ const Footer = ({ openModal }) => {
             </p>
           </div>
 
-          {/* Quick links + external links */}
           <div className="flex flex-col items-center md:items-center">
             <h4 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400 mb-3">
               Quick Links
             </h4>
 
-            {/* one-line internal links */}
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <button
                 type="button"
@@ -83,7 +77,6 @@ const Footer = ({ openModal }) => {
               </button>
             </div>
 
-            {/* text external links under Quick Links */}
             <div className="flex flex-wrap justify-center gap-6 mt-4 text-sm">
               <a
                 href={RESUME_URL}
@@ -112,7 +105,6 @@ const Footer = ({ openModal }) => {
             </div>
           </div>
 
-          {/* Contact */}
           <div className="flex flex-col items-center md:items-end">
             <h4 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400 mb-3">
               Get In Touch
@@ -132,7 +124,6 @@ const Footer = ({ openModal }) => {
           </div>
         </div>
 
-        {/* Bottom line */}
         <div className="border-t border-gray-800 pt-4 text-xs text-gray-500 flex items-center justify-center gap-1">
           <span>© {currentYear} Justin Adame.</span>
         </div>
