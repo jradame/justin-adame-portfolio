@@ -132,7 +132,7 @@ const Projects = () => {
                 <img
                   src={project.imageUrl}
                   alt={`${project.title} preview`}
-                  className="w-full h-32 md:h-40 object-cover rounded-t-xl"
+className="w-full h-64 md:h-72 object-cover object-[50%_20%] rounded-t-xl"
                 />
               </div>
 
@@ -176,10 +176,10 @@ const Projects = () => {
                     alt={`${project.title} screenshot`}
                     className={
                       project.title === "Band Website"
-                        ? "w-full h-32 md:h-40 object-cover object-[50%_20%] rounded-t-xl"
+                        ? "w-full h-48 md:h-56 object-cover object-[50%_20%] rounded-t-xl"
                         : project.title === "Photography Portfolio"
-                        ? "w-full h-32 md:h-40 object-cover object-[50%_30%] rounded-t-xl"
-                        : "w-full h-32 md:h-40 object-cover rounded-t-xl"
+                        ? "w-full h-48 md:h-56 object-cover object-[50%_30%] rounded-t-xl"
+                        : "w-full h-48 md:h-56 object-cover rounded-t-xl"
                     }
                   />
                 </div>
