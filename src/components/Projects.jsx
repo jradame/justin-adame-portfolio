@@ -9,6 +9,7 @@ const webProjects = [
     liveUrl: "https://skinstricapp-fresh.vercel.app/",
     tech: ["React", "Tailwind", "REST APIs"],
     imageUrl: "/images/skinstriccopy.png",
+    imagePosition: "object-center",
   },
   {
     title: "CineScope",
@@ -16,6 +17,7 @@ const webProjects = [
     liveUrl: "https://cinescope-project.vercel.app",
     tech: ["HTML5", "CSS3", "JavaScript", "OMDb API"],
     imageUrl: "/images/cinescope-preview.png",
+    imagePosition: "object-center",
   },
   {
     title: "Library Project",
@@ -23,6 +25,7 @@ const webProjects = [
     liveUrl: "https://libraryproject-beryl.vercel.app",
     tech: ["React", "CSS3", "JavaScript"],
     imageUrl: "/images/library-screenshot.png",
+    imagePosition: "object-center",
   },
   {
     title: "Ultraverse NFT Marketplace",
@@ -30,6 +33,7 @@ const webProjects = [
     liveUrl: "https://ultraverse-nft-project.vercel.app/",
     tech: ["React", "CSS3", "React Router"],
     imageUrl: "/images/ultraverse-screenshot.png",
+    imagePosition: "object-center",
   },
 ];
 
@@ -40,6 +44,7 @@ const uxProjects = [
     liveUrl: "/projects/tiptrack",
     tech: ["UX Research", "Figma", "Prototyping"],
     imageUrl: "/images/tiptrackcopy.png",
+    imagePosition: "object-[50%_40%]",
   },
   {
     title: "EarlyDrop – UX Case Study",
@@ -47,6 +52,7 @@ const uxProjects = [
     liveUrl: "/projects/earlydrop",
     tech: ["UX Research", "Figma", "Usability Testing"],
     imageUrl: "/images/earlydrop.png",
+    imagePosition: "object-center",
   },
 ];
 
@@ -57,6 +63,7 @@ const personalProjects = [
     liveUrl: "https://rios-band.vercel.app",
     tech: ["React", "CSS3", "Responsive Layout"],
     imageUrl: "/images/riosband1.png",
+    imagePosition: "object-[50%_20%]",
   },
   {
     title: "Photography Portfolio",
@@ -64,6 +71,7 @@ const personalProjects = [
     liveUrl: "https://clouse.vercel.app",
     tech: ["React", "CSS3", "Image Optimization"],
     imageUrl: "/images/venice2016.jpg",
+    imagePosition: "object-[50%_30%]",
   },
 ];
 
@@ -85,18 +93,18 @@ const Projects = () => {
               key={project.title}
               className="flex flex-col bg-[#020617] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow"
             >
-              <div className="w-full bg-[#020617] flex items-center justify-center">
+              <div className="w-full h-48 bg-[#020617] overflow-hidden">
                 <img
                   src={project.imageUrl}
                   alt={`${project.title} screenshot`}
-                  className="w-full h-28 md:h-32 object-cover rounded-t-xl"
+                  className={`w-full h-full object-cover ${project.imagePosition}`}
                 />
               </div>
 
-              <div className="flex flex-col p-5 h-full">
-                <h4 className="text-lg font-semibold mb-2">{project.title}</h4>
-                <p className="text-sm text-gray-300 leading-relaxed mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-col p-4 flex-1">
+                <h4 className="text-base font-semibold mb-2 h-10 line-clamp-2">{project.title}</h4>
+                <p className="text-sm text-gray-300 leading-relaxed mb-3 h-20 overflow-hidden">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-3 min-h-[28px]">
                   {project.tech.map((tag) => (
                     <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-100 tracking-wide">
                       {tag}
@@ -128,25 +136,25 @@ const Projects = () => {
               key={project.title}
               className="flex flex-col bg-[#020617] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow"
             >
-              <div className="w-full bg-[#020617] flex items-center justify-center">
+              <div className="w-full h-80 bg-[#020617] overflow-hidden">
                 <img
                   src={project.imageUrl}
                   alt={`${project.title} preview`}
-className="w-full h-64 md:h-72 object-cover object-[50%_20%] rounded-t-xl"
+                  className={`w-full h-full object-cover ${project.imagePosition}`}
                 />
               </div>
 
-              <div className="flex flex-col p-5 h-full">
-                <h4 className="text-lg font-semibold mb-2">{project.title}</h4>
-                <p className="text-sm text-gray-300 leading-relaxed mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-col p-4">
+                <h4 className="text-base font-semibold mb-2">{project.title}</h4>
+                <p className="text-sm text-gray-300 leading-relaxed mb-3">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-3">
                   {project.tech.map((tag) => (
                     <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-100 tracking-wide">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="mt-auto pt-3 border-t border-gray-800">
+                <div className="pt-3 border-t border-gray-800">
                   <a
                     href={project.liveUrl}
                     className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-400 hover:text-indigo-300"
@@ -169,33 +177,25 @@ className="w-full h-64 md:h-72 object-cover object-[50%_20%] rounded-t-xl"
               key={project.title}
               className="flex flex-col bg-[#020617] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow"
             >
-              {project.imageUrl && (
-                <div className="w-full bg-[#020617] flex items-center justify-center">
-                  <img
-                    src={project.imageUrl}
-                    alt={`${project.title} screenshot`}
-                    className={
-                      project.title === "Band Website"
-                        ? "w-full h-48 md:h-56 object-cover object-[50%_20%] rounded-t-xl"
-                        : project.title === "Photography Portfolio"
-                        ? "w-full h-48 md:h-56 object-cover object-[50%_30%] rounded-t-xl"
-                        : "w-full h-48 md:h-56 object-cover rounded-t-xl"
-                    }
-                  />
-                </div>
-              )}
+              <div className="w-full h-80 bg-[#020617] overflow-hidden">
+                <img
+                  src={project.imageUrl}
+                  alt={`${project.title} screenshot`}
+                  className={`w-full h-full object-cover ${project.imagePosition}`}
+                />
+              </div>
 
-              <div className="flex flex-col p-5 h-full">
-                <h4 className="text-lg font-semibold mb-2">{project.title}</h4>
-                <p className="text-sm text-gray-300 leading-relaxed mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-col p-4">
+                <h4 className="text-base font-semibold mb-2">{project.title}</h4>
+                <p className="text-sm text-gray-300 leading-relaxed mb-3">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-3">
                   {project.tech.map((tag) => (
                     <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-100 tracking-wide">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="mt-auto pt-3 border-t border-gray-800">
+                <div className="pt-3 border-t border-gray-800">
                   <a
                     href={project.liveUrl}
                     target="_blank"
