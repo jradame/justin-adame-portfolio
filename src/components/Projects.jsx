@@ -144,17 +144,17 @@ const Projects = () => {
                 />
               </div>
 
-              <div className="flex flex-col p-4">
-                <h4 className="text-base font-semibold mb-2">{project.title}</h4>
-                <p className="text-sm text-gray-300 leading-relaxed mb-3">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-3">
+              <div className="flex flex-col p-4 flex-1">
+                <h4 className="text-base font-semibold mb-2 h-10 line-clamp-2">{project.title}</h4>
+                <p className="text-sm text-gray-300 leading-relaxed mb-3 h-20 overflow-hidden">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-3 min-h-[28px]">
                   {project.tech.map((tag) => (
                     <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-100 tracking-wide">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="pt-3 border-t border-gray-800">
+                <div className="mt-auto pt-3 border-t border-gray-800">
                   <a
                     href={project.liveUrl}
                     className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-400 hover:text-indigo-300"
@@ -185,17 +185,17 @@ const Projects = () => {
                 />
               </div>
 
-              <div className="flex flex-col p-4">
-                <h4 className="text-base font-semibold mb-2">{project.title}</h4>
-                <p className="text-sm text-gray-300 leading-relaxed mb-3">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-3">
+              <div className="flex flex-col p-4 flex-1">
+                <h4 className="text-base font-semibold mb-2 h-10 line-clamp-2">{project.title}</h4>
+                <p className="text-sm text-gray-300 leading-relaxed mb-3 h-20 overflow-hidden">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-3 min-h-[28px]">
                   {project.tech.map((tag) => (
                     <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-100 tracking-wide">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="pt-3 border-t border-gray-800">
+                <div className="mt-auto pt-3 border-t border-gray-800">
                   <a
                     href={project.liveUrl}
                     target="_blank"
