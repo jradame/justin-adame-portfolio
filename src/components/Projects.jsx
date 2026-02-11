@@ -43,7 +43,7 @@ const uxProjects = [
     description: "Mobile app UX case study for bartenders and servers, focused on fast logging, clear earnings, and clean visual design.",
     liveUrl: "/projects/tiptrack",
     tech: ["UX Research", "Figma", "Prototyping"],
-    imageUrl: "/images/tiptrackcopy.png",
+    imageUrl: "/images/tiptrack-preview.png",
     imagePosition: "object-[50%_40%]",
   },
   {
