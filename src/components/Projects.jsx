@@ -2,11 +2,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
+
 const webProjects = [
   {
     title: "SkinStric Skin Care Platform",
     description: "Professional dermatology web app with patient portal, image upload/processing for skin analysis, and API integrations.",
-    liveUrl: "https://skinstricapp-fresh.vercel.app/",
+    liveUrl: "https://skinstricapp.vercel.app/",
     tech: ["React", "Tailwind", "REST APIs"],
     imageUrl: "/images/skinstriccopy.png",
     imagePosition: "object-center",
@@ -37,6 +38,7 @@ const webProjects = [
   },
 ];
 
+
 const uxProjects = [
   {
     title: "TipTrack – UX Case Study",
@@ -55,6 +57,7 @@ const uxProjects = [
     imagePosition: "object-center",
   },
 ];
+
 
 const personalProjects = [
   {
@@ -75,6 +78,7 @@ const personalProjects = [
   },
 ];
 
+
 const Projects = () => {
   return (
     <section id="projects" className="w-full px-4 py-16 bg-black text-white border-t border-gray-900">
@@ -83,6 +87,7 @@ const Projects = () => {
         <p className="text-gray-300 mb-8">
           Real‑world builds and UX case studies you can click into.
         </p>
+
 
         <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400 mb-4">
           Web Development
@@ -100,6 +105,7 @@ const Projects = () => {
                   className={`w-full h-full object-cover ${project.imagePosition}`}
                 />
               </div>
+
 
               <div className="flex flex-col p-4 flex-1">
                 <h4 className="text-base font-semibold mb-2 h-10 line-clamp-2">{project.title}</h4>
@@ -127,6 +133,7 @@ const Projects = () => {
           ))}
         </div>
 
+
         <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400 mb-4">
           UX / UI Case Studies
         </h3>
@@ -143,6 +150,7 @@ const Projects = () => {
                   className={`w-full h-full object-cover ${project.imagePosition}`}
                 />
               </div>
+
 
               <div className="flex flex-col p-4 flex-1">
                 <h4 className="text-base font-semibold mb-2 h-10 line-clamp-2">{project.title}</h4>
@@ -168,6 +176,7 @@ const Projects = () => {
           ))}
         </div>
 
+
         <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400 mb-4 mt-12">
           Personal Projects
         </h3>
@@ -184,6 +193,7 @@ const Projects = () => {
                   className={`w-full h-full object-cover ${project.imagePosition}`}
                 />
               </div>
+
 
               <div className="flex flex-col p-4 flex-1">
                 <h4 className="text-base font-semibold mb-2 h-10 line-clamp-2">{project.title}</h4>
@@ -214,5 +224,6 @@ const Projects = () => {
     </section>
   );
 };
+
 
 export default Projects;
