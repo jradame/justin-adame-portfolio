@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-
 
 const webProjects = [
   {
@@ -38,7 +38,6 @@ const webProjects = [
   },
 ];
 
-
 const uxProjects = [
   {
     title: "TipTrack – UX Case Study",
@@ -57,7 +56,6 @@ const uxProjects = [
     imagePosition: "object-center",
   },
 ];
-
 
 const personalProjects = [
   {
@@ -78,7 +76,6 @@ const personalProjects = [
   },
 ];
 
-
 const Projects = () => {
   return (
     <section id="projects" className="w-full px-4 py-16 bg-black text-white border-t border-gray-900">
@@ -87,7 +84,6 @@ const Projects = () => {
         <p className="text-gray-300 mb-8">
           Real‑world builds and UX case studies you can click into.
         </p>
-
 
         <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400 mb-4">
           Web Development
@@ -105,7 +101,6 @@ const Projects = () => {
                   className={`w-full h-full object-cover ${project.imagePosition}`}
                 />
               </div>
-
 
               <div className="flex flex-col p-4 flex-1">
                 <h4 className="text-base font-semibold mb-2 h-10 line-clamp-2">{project.title}</h4>
@@ -133,7 +128,6 @@ const Projects = () => {
           ))}
         </div>
 
-
         <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400 mb-4">
           UX / UI Case Studies
         </h3>
@@ -151,7 +145,6 @@ const Projects = () => {
                 />
               </div>
 
-
               <div className="flex flex-col p-4 flex-1">
                 <h4 className="text-base font-semibold mb-2 h-10 line-clamp-2">{project.title}</h4>
                 <p className="text-sm text-gray-300 leading-relaxed mb-3 h-20 overflow-hidden">{project.description}</p>
@@ -163,19 +156,18 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="mt-auto pt-3 border-t border-gray-800">
-                  <a
-                    href={project.liveUrl}
+                  <Link
+                    to={project.liveUrl}
                     className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-400 hover:text-indigo-300"
                   >
                     <FontAwesomeIcon icon={faExternalLinkAlt} />
                     View case study
-                  </a>
+                  </Link>
                 </div>
               </div>
             </article>
           ))}
         </div>
-
 
         <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400 mb-4 mt-12">
           Personal Projects
@@ -193,7 +185,6 @@ const Projects = () => {
                   className={`w-full h-full object-cover ${project.imagePosition}`}
                 />
               </div>
-
 
               <div className="flex flex-col p-4 flex-1">
                 <h4 className="text-base font-semibold mb-2 h-10 line-clamp-2">{project.title}</h4>
@@ -224,6 +215,5 @@ const Projects = () => {
     </section>
   );
 };
-
 
 export default Projects;
