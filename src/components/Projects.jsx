@@ -5,6 +5,15 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 const webProjects = [
   {
+    title: "Swell – Surf Session Tracker",
+    description:
+      "Responsive surf session tracker built in React, focused on logging a session in under a minute with history, charts, and mobile-first UI.",
+    liveUrl: "https://swell-beta.vercel.app",
+    tech: ["React", "Vite", "Context API", "CSS Modules", "Recharts"],
+    imageUrl: "/images/swellhome.png",
+    imagePosition: "object-[50%_40%]",
+  },
+  {
     title: "SkinStric Skin Care Platform",
     description: "Professional dermatology web app with patient portal, image upload/processing for skin analysis, and API integrations.",
     liveUrl: "https://skinstricapp.vercel.app/",
