@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Projects from "./components/Projects";
 import TipTrackCaseStudy from "./components/TipTrackCaseStudy";
 import EarlyDropCaseStudy from "./components/EarlyDropCaseStudy";
+import SwellCaseStudy from "./components/SwellCaseStudy"; // adjust path if needed
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route path="/projects" element={<Projects />} />
       <Route path="/projects/tiptrack" element={<TipTrackCaseStudy />} />
       <Route path="/projects/earlydrop" element={<EarlyDropCaseStudy />} />
+      <Route path="/projects/swell" element={<SwellCaseStudy />} />
     </Routes>
   );
 }
