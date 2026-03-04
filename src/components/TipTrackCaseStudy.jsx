@@ -150,7 +150,7 @@ const TipTrackCaseStudy = () => {
                 <li>Compared tab vs. bottom navigation for faster access to key screens.</li>
               </ul>
               <div className="mt-auto">
-                <img src="/images/lofitipframe.png" alt="TipTrack low-fidelity wireframes" className="w-full rounded-lg shadow-md" />
+                <img src="/images/lofitiptrack.png" alt="TipTrack low-fidelity wireframes" className="w-full rounded-lg shadow-md" />
               </div>
             </div>
 
