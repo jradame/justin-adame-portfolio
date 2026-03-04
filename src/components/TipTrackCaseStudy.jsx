@@ -165,7 +165,7 @@ const TipTrackCaseStudy = () => {
                 <li>Polished interaction details for buttons, cards, and graphs.</li>
               </ul>
               <div className="mt-auto">
-                <img src="/images/tiptrack-preview.png" alt="TipTrack high-fidelity mockups" className="w-full rounded-lg shadow-md" />
+                <img src="/images/tiptrackcard.png" alt="TipTrack high-fidelity mockups" className="w-full rounded-lg shadow-md" />
               </div>
             </div>
           </div>

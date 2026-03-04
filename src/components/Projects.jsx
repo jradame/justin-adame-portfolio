@@ -58,7 +58,7 @@ const uxProjects = [
       "Mobile app UX case study for bartenders and servers, focused on fast logging, clear earnings, and clean visual design.",
     liveUrl: "/projects/tiptrack",
     tech: ["UX Research", "Figma", "Prototyping"],
-    imageUrl: "/images/tiptrack-preview.png",
+    imageUrl: "/images/tiptrackcard.png",
     imagePosition: "object-[50%_40%]",
   },
   {
@@ -97,175 +97,183 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full px-4 py-16 bg-black text-white border-t border-gray-900"
+      className="w-full px-4 py-20 bg-black text-white border-t border-gray-900"
     >
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold mb-2">Projects</h2>
-        <p className="text-gray-300 mb-8">
-          Real‑world builds and UX case studies you can click into.
-        </p>
+      <div className="max-w-7xl mx-auto space-y-16">
+        <header>
+          <h2 className="text-3xl font-bold mb-3">Projects</h2>
+          <p className="text-gray-300">
+            Real‑world builds and UX case studies you can click into.
+          </p>
+        </header>
 
         {/* Web Development */}
-        <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400 mb-4">
-          Web Development
-        </h3>
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 auto-rows-fr mb-12 lg:justify-items-center">
-          {webProjects.map((project, index) => (
-            <article
-              key={project.title}
-              className={`h-full flex flex-col bg-[#020617] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow ${
-                index === webProjects.length - 1 ? "lg:col-span-2 lg:max-w-xl" : ""
-              }`}
-            >
-              <div className="w-full aspect-video bg-[#020617] overflow-hidden">
-                <img
-                  src={project.imageUrl}
-                  alt={`${project.title} screenshot`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <div className="flex flex-col p-4 flex-1">
-                <h4 className="text-base font-semibold mb-2 h-10 line-clamp-2">
-                  {project.title}
-                </h4>
-                <p className="text-sm text-gray-300 leading-relaxed mb-3 line-clamp-3">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-3 min-h-[28px]">
-                  {project.tech.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-100 tracking-wide"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+        <section className="space-y-6">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400">
+            Web Development
+          </h3>
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 auto-rows-fr lg:justify-items-center">
+            {webProjects.map((project, index) => (
+              <article
+                key={project.title}
+                className={`h-full flex flex-col bg-[#020617] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow ${
+                  index === webProjects.length - 1 ? "lg:col-span-2 lg:max-w-xl" : ""
+                }`}
+              >
+                <div className="w-full aspect-video bg-[#020617] overflow-hidden">
+                  <img
+                    src={project.imageUrl}
+                    alt={`${project.title} screenshot`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="mt-auto pt-3 border-t border-gray-800 flex flex-wrap gap-4">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-400 hover:text-indigo-300"
-                  >
-                    <FontAwesomeIcon icon={faExternalLinkAlt} />
-                    View live
-                  </a>
 
-                  {project.title.startsWith("Swell") && (
-                    <Link
-                      to="/projects/swell"
+                <div className="flex flex-col p-6 flex-1 gap-3">
+                  <h4 className="text-base font-semibold h-10 line-clamp-2">
+                    {project.title}
+                  </h4>
+                  <p className="text-sm text-gray-300 leading-relaxed line-clamp-3">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 min-h-[28px]">
+                    {project.tech.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-100 tracking-wide"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-auto pt-4 border-t border-gray-800 flex flex-wrap gap-4">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
                       className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-400 hover:text-indigo-300"
                     >
-                      View case study
-                    </Link>
-                  )}
+                      <FontAwesomeIcon icon={faExternalLinkAlt} />
+                      View live
+                    </a>
+
+                    {project.title.startsWith("Swell") && (
+                      <Link
+                        to="/projects/swell"
+                        className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-400 hover:text-indigo-300"
+                      >
+                        View case study
+                      </Link>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
         {/* UX / UI Case Studies */}
-        <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400 mb-4">
-          UX / UI Case Studies
-        </h3>
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
-          {uxProjects.map((project) => (
-            <article
-              key={project.title}
-              className="flex flex-col bg-[#020617] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow"
-            >
-              <div className="w-full h-80 bg-[#020617] overflow-hidden">
-                <img
-                  src={project.imageUrl}
-                  alt={`${project.title} preview`}
-                  className={`w-full h-full object-cover ${project.imagePosition}`}
-                />
-              </div>
+        <section className="space-y-6">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400">
+            UX / UI Case Studies
+          </h3>
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
+            {uxProjects.map((project) => (
+              <article
+                key={project.title}
+                className="flex flex-col bg-[#020617] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow"
+              >
+                <div className="w-full h-80 bg-[#020617] overflow-hidden">
+                  <img
+                    src={project.imageUrl}
+                    alt={`${project.title} preview`}
+                    className={`w-full h-full object-cover ${project.imagePosition}`}
+                  />
+                </div>
 
-              <div className="flex flex-col p-4 flex-1">
-                <h4 className="text-base font-semibold mb-2 h-10 line-clamp-2">
-                  {project.title}
-                </h4>
-                <p className="text-sm text-gray-300 leading-relaxed mb-3 h-20 overflow-hidden">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-3 min-h-[28px]">
-                  {project.tech.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-100 tracking-wide"
+                <div className="flex flex-col p-6 flex-1 gap-3">
+                  <h4 className="text-base font-semibold h-10 line-clamp-2">
+                    {project.title}
+                  </h4>
+                  <p className="text-sm text-gray-300 leading-relaxed line-clamp-3">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 min-h-[28px]">
+                    {project.tech.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-100 tracking-wide"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-auto pt-4 border-t border-gray-800">
+                    <Link
+                      to={project.liveUrl}
+                      className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-400 hover:text-indigo-300"
                     >
-                      {tag}
-                    </span>
-                  ))}
+                      <FontAwesomeIcon icon={faExternalLinkAlt} />
+                      View case study
+                    </Link>
+                  </div>
                 </div>
-                <div className="mt-auto pt-3 border-t border-gray-800">
-                  <Link
-                    to={project.liveUrl}
-                    className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-400 hover:text-indigo-300"
-                  >
-                    <FontAwesomeIcon icon={faExternalLinkAlt} />
-                    View case study
-                  </Link>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
         {/* Personal Projects */}
-        <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400 mb-4 mt-12">
-          Personal Projects
-        </h3>
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
-          {personalProjects.map((project) => (
-            <article
-              key={project.title}
-              className="flex flex-col bg-[#020617] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow"
-            >
-              <div className="w-full h-80 bg-[#020617] overflow-hidden">
-                <img
-                  src={project.imageUrl}
-                  alt={`${project.title} screenshot`}
-                  className={`w-full h-full object-cover ${project.imagePosition}`}
-                />
-              </div>
+        <section className="space-y-6">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400">
+            Personal Projects
+          </h3>
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
+            {personalProjects.map((project) => (
+              <article
+                key={project.title}
+                className="flex flex-col bg-[#020617] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow"
+              >
+                <div className="w-full h-80 bg-[#020617] overflow-hidden">
+                  <img
+                    src={project.imageUrl}
+                    alt={`${project.title} screenshot`}
+                    className={`w-full h-full object-cover ${project.imagePosition}`}
+                  />
+                </div>
 
-              <div className="flex flex-col p-4 flex-1">
-                <h4 className="text-base font-semibold mb-2 h-10 line-clamp-2">
-                  {project.title}
-                </h4>
-                <p className="text-sm text-gray-300 leading-relaxed mb-3 h-20 overflow-hidden">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-3 min-h-[28px]">
-                  {project.tech.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-100 tracking-wide"
+                <div className="flex flex-col p-6 flex-1 gap-3">
+                  <h4 className="text-base font-semibold h-10 line-clamp-2">
+                    {project.title}
+                  </h4>
+                  <p className="text-sm text-gray-300 leading-relaxed line-clamp-3">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 min-h-[28px]">
+                    {project.tech.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-2.5 py-1 rounded-full bg-gray-800 text-gray-100 tracking-wide"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-auto pt-4 border-t border-gray-800">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-400 hover:text-indigo-300"
                     >
-                      {tag}
-                    </span>
-                  ))}
+                      <FontAwesomeIcon icon={faExternalLinkAlt} />
+                      View site
+                    </a>
+                  </div>
                 </div>
-                <div className="mt-auto pt-3 border-t border-gray-800">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-400 hover:text-indigo-300"
-                  >
-                    <FontAwesomeIcon icon={faExternalLinkAlt} />
-                    View site
-                  </a>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
+        </section>
       </div>
     </section>
   );
