@@ -143,7 +143,7 @@ const EarlyDropCaseStudy = () => {
                 Simple login and account creation flow to get users into the app quickly. Minimal friction to start browsing new releases immediately.
               </p>
               <div className="mt-auto">
-                <img src="/images/lofisketch.png" alt="EarlyDrop low-fidelity wireframes" className="w-full rounded-lg shadow-md" />
+                <img src="/images/earlydroplofi.png" alt="EarlyDrop low-fidelity wireframes" className="w-full rounded-lg shadow-md" />
               </div>
             </div>
 
@@ -153,7 +153,7 @@ const EarlyDropCaseStudy = () => {
                 Curated homepage showcasing new releases with album art, artist info, and prominent reward points display. One‑tap access to pre‑order or stream.
               </p>
               <div className="mt-auto">
-                <img src="/images/earlydrop.png" alt="EarlyDrop high-fidelity mockups" className="w-full rounded-lg shadow-md" />
+                <img src="/images/featuredpreorders.png" alt="EarlyDrop high-fidelity mockups" className="w-full rounded-lg shadow-md" />
               </div>
             </div>
 
@@ -163,7 +163,7 @@ const EarlyDropCaseStudy = () => {
                 Fast search with clear album cards, descriptions, and quick access to pre‑order. Easy navigation back to browsing.
               </p>
               <div className="mt-auto">
-                <img src="/images/search.png" alt="EarlyDrop search screen" className="w-full rounded-lg shadow-md" />
+                <img src="/images/searchanddiscover.png" alt="EarlyDrop search screen" className="w-full rounded-lg shadow-md" />
               </div>
             </div>
 
@@ -173,7 +173,7 @@ const EarlyDropCaseStudy = () => {
                 Clean checkout with order summary, total, and reward points earned. Streamlined flow reduces abandonment and confirms purchase instantly.
               </p>
               <div className="mt-auto">
-                <img src="/images/confirm.png" alt="EarlyDrop order confirmation" className="w-full rounded-lg shadow-md" />
+                <img src="/images/orderconfirmation.png" alt="EarlyDrop order confirmation" className="w-full rounded-lg shadow-md" />
               </div>
             </div>
           </div>
