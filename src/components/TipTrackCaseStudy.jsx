@@ -42,7 +42,7 @@ const TipTrackCaseStudy = () => {
           <h2 className="text-2xl md:text-3xl text-gray-300 mb-6">A Mobile Tip Tracking App</h2>
           <p className="text-lg text-gray-400 mb-8">Helping bartenders track tips and take control of their finances</p>
 
-          <img src="/images/tiptrack-preview.png" alt="TipTrack app feature mockups" className="mx-auto max-w-sm w-full rounded-2xl shadow-lg" />
+          <img src="/images/tiptrackcard.png" alt="TipTrack app feature mockups" className="mx-auto max-w-sm w-full rounded-2xl shadow-lg" />
 
           <div className="mt-6 text-gray-400 italic text-base">UX Case Study &nbsp; | &nbsp; Justin Adame</div>
         </section>
