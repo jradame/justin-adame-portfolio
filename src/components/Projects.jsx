@@ -64,7 +64,7 @@ const uxProjects = [
   {
     title: "EarlyDrop – UX Case Study",
     description:
-      "Music pre‑order app UX project with usability testing, user flows, and high‑fidelity mobile prototypes.",
+      "Music pre-order app UX project with usability testing, user flows, and high-fidelity mobile prototypes.",
     liveUrl: "/projects/earlydrop",
     tech: ["UX Research", "Figma", "Usability Testing"],
     imageUrl: "/images/earlydropmain.png",
@@ -93,6 +93,9 @@ const personalProjects = [
   },
 ];
 
+const projectCardClass =
+  "flex flex-col bg-[#0a0f22] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow";
+
 const Projects = () => {
   return (
     <section
@@ -103,11 +106,10 @@ const Projects = () => {
         <header>
           <h2 className="text-3xl font-bold mb-3">Projects</h2>
           <p className="text-gray-300">
-            Real‑world builds and UX case studies you can click into.
+            Real-world builds and UX case studies you can click into.
           </p>
         </header>
 
-        {/* Web Development */}
         <section className="space-y-6">
           <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400">
             Web Development
@@ -116,11 +118,13 @@ const Projects = () => {
             {webProjects.map((project, index) => (
               <article
                 key={project.title}
-                className={`h-full flex flex-col bg-[#020617] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow ${
-                  index === webProjects.length - 1 ? "lg:col-span-2 lg:max-w-xl" : ""
+                className={`${projectCardClass} ${
+                  index === webProjects.length - 1
+                    ? "lg:col-span-2 lg:max-w-xl"
+                    : ""
                 }`}
               >
-                <div className="w-full aspect-video bg-[#020617] overflow-hidden">
+                <div className="w-full aspect-video bg-[#0a0f22] overflow-hidden">
                   <img
                     src={project.imageUrl}
                     alt={`${project.title} screenshot`}
@@ -171,18 +175,14 @@ const Projects = () => {
           </div>
         </section>
 
-        {/* UX / UI Case Studies */}
         <section className="space-y-6">
           <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400">
             UX / UI Case Studies
           </h3>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
             {uxProjects.map((project) => (
-              <article
-                key={project.title}
-                className="flex flex-col bg-[#020617] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow"
-              >
-                <div className="w-full h-80 bg-[#020617] overflow-hidden">
+              <article key={project.title} className={projectCardClass}>
+                <div className="w-full h-80 bg-[#0a0f22] overflow-hidden">
                   <img
                     src={project.imageUrl}
                     alt={`${project.title} preview`}
@@ -222,18 +222,14 @@ const Projects = () => {
           </div>
         </section>
 
-        {/* Personal Projects */}
         <section className="space-y-6">
           <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-gray-400">
             Personal Projects
           </h3>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
             {personalProjects.map((project) => (
-              <article
-                key={project.title}
-                className="flex flex-col bg-[#020617] border border-gray-800 rounded-xl overflow-hidden shadow-lg shadow-blue-400/25 hover:shadow-xl hover:shadow-blue-400/60 transition-shadow"
-              >
-                <div className="w-full h-80 bg-[#020617] overflow-hidden">
+              <article key={project.title} className={projectCardClass}>
+                <div className="w-full h-80 bg-[#0a0f22] overflow-hidden">
                   <img
                     src={project.imageUrl}
                     alt={`${project.title} screenshot`}
