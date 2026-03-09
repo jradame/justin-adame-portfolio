@@ -41,7 +41,7 @@ const EarlyDropCaseStudy = () => {
           <h2 className="text-2xl md:text-3xl text-gray-300 mb-6">Music Pre-Order & Discovery App</h2>
           <p className="text-lg text-gray-400 mb-8">Stream and pre-order new music before it officially drops</p>
 
-          <img src="/images/earlydrop.png" alt="EarlyDrop app feature mockups" className="mx-auto max-w-sm w-full rounded-2xl shadow-lg" />
+          <img src="/images/earlydropmain.png" alt="EarlyDrop app feature mockups" className="mx-auto max-w-sm w-full rounded-2xl shadow-lg" />
 
           <div className="mt-6 text-gray-400 italic text-base">UX Case Study &nbsp; | &nbsp; Justin Adame</div>
         </section>

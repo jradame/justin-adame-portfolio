@@ -67,7 +67,7 @@ const uxProjects = [
       "Music pre‑order app UX project with usability testing, user flows, and high‑fidelity mobile prototypes.",
     liveUrl: "/projects/earlydrop",
     tech: ["UX Research", "Figma", "Usability Testing"],
-    imageUrl: "/images/earlydropligin.png",
+    imageUrl: "/images/earlydropmain.png",
     imagePosition: "object-center",
   },
 ];
